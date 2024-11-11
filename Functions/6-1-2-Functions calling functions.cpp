@@ -12,19 +12,24 @@ double CalcCircleArea(double circleDiameter) {
    return circleArea;
 }
 
-double PizzaCalories(double pizzaDiameter) {
+double PizzaCalories(double pD) {
    double totalCalories;
    double caloriesPerSquareInch = 16.7;    // Regular crust pepperoni pizza
    
-   totalCalories = CalcCircleArea(pizzaDiameter) * caloriesPerSquareInch;
+   totalCalories = CalcCircleArea(pD) * caloriesPerSquareInch;
    
    return totalCalories;
 }
 
 
 int main() {
-   cout << "12 inch pizza has " << PizzaCalories(12.0) << " calories." << endl;
-   cout << "14 inch pizza has " << PizzaCalories(14.0) << " calories." << endl;
+
+   double pizzaDiameter = 12.0;
+
+   cout << "12 inch pizza has " << PizzaCalories(pizzaDiameter) << " calories." << endl;
+   pizzaDiameter = 14.0;
+
+   cout << "14 inch pizza has " << PizzaCalories(pizzaDiameter) << " calories." << endl;
    
    return 0;
 }

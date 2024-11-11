@@ -11,6 +11,8 @@ double HeightFtInToCm(int heightFt, int heightIn) {
    totIn = (heightFt * IN_PER_FT) + heightIn; // Total inches
    cmVal = totIn * CM_PER_IN;                 // Conv inch to cm
    return cmVal;
+
+   
 }
 
 int main() {
